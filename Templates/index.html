@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cyber Password Strength Checker</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+<div class="card">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <i class="fa-solid fa-shield-halved shield"></i>
+
+        <h1>Password Strength Checker</h1>
+
+        <p>Build stronger passwords and protect your digital identity.</p>
+
+    </div>
+
+    <!-- Password Input -->
+
+    <div class="password-box">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password">
+
+        <button id="togglePassword">
+
+            <i class="fa-solid fa-eye"></i>
+
+        </button>
+
+    </div>
+
+    <!-- Character Count -->
+
+    <div class="counter">
+
+        Characters :
+        <span id="charCount">0</span>
+
+    </div>
+
+    <!-- Strength Meter -->
+
+    <div class="meter">
+
+        <div
+            class="meter-fill"
+            id="meterFill">
+
+        </div>
+
+    </div>
+
+    <div
+        id="strengthText"
+        class="strength">
+
+        Waiting for password...
+
+    </div>
+
+    <!-- Dashboard -->
+
+    <div class="dashboard">
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Security Score</h3>
+
+            <h2 id="scoreValue">0%</h2>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Entropy</h3>
+
+            <h2><span id="entropyValue">0</span> bits</h2>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Estimated Crack Time</h3>
+
+            <h2 id="crackTime">-</h2>
+
+        </div>
+
+    </div>
+
+    <!-- Checklist -->
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-list-check"></i>
+
+        Password Requirements
+
+    </div>
+
+    <div class="checklist">
+
+        <div id="lengthCheck">
+
+            ❌ Minimum 8 Characters
+
+        </div>
+
+        <div id="upperCheck">
+
+            ❌ Uppercase Letter
+
+        </div>
+
+        <div id="lowerCheck">
+
+            ❌ Lowercase Letter
+
+        </div>
+
+        <div id="numberCheck">
+
+            ❌ Number
+
+        </div>
+
+        <div id="symbolCheck">
+
+            ❌ Special Symbol
+
+        </div>
+
+    </div>
+
+    <!-- Suggestions -->
+
+    <div class="suggestion-box">
+
+        <h3>
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            Suggestions
+
+        </h3>
+
+        <ul id="suggestions">
+
+            <li>Start typing to analyze your password...</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        <i class="fa-solid fa-lock"></i>
+
+        Built with Flask, HTML, CSS & JavaScript |
+        Cyber Security Internship Project
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
